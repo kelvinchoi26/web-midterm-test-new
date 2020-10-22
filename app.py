@@ -50,9 +50,13 @@ def index():
     return render_template('base.html')
 
 
-@app.route('/main')
-def main():
-    return render_template('main.html')
+@app.route('/writing')
+def writing():
+    return render_template('writing.html')
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 
 if __name__ == '__main__':
