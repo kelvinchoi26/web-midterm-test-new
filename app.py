@@ -54,6 +54,10 @@ def index():
 def writing():
     return render_template('writing.html')
 
+@app.route('/board')
+def board():
+    return render_template('board.html')
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
