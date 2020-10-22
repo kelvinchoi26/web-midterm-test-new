@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Writing</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -14,16 +14,16 @@
 <div class="container">
   <form action="/action_page.php">
     <div class="form-group">
-      <label for="usr">제목:</label>
+      <h6>제목</h6>
       <input type="text" class="form-control" id="usr" name="title">
     </div>
     <div class="form-group">
-      <label for="pwd">작성자:</label>
+      <h6>작성자</h6>
       <input type="text" class="form-control" id="usr" name="name">
     </div>
     <div class="form-group">
-      <label for="comment">내용</label>
-      <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+        <h6>내용</h6>
+      <textarea class="form-control" rows="5" id="comment" name="text">{{ post }}</textarea>
     </div>
   </form>
 </div>

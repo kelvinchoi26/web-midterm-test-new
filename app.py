@@ -49,7 +49,6 @@ class NameForm(FlaskForm):
 def index():
     return render_template('base.html')
 
-
 @app.route('/writing')
 def writing():
     return render_template('writing.html')
@@ -65,6 +64,15 @@ def post():
 @app.route('/author')
 def author():
     return render_template('author.html')
+
+# @app.route('/writing', methods=['GET', 'POST'])
+# def writing():
+#     name = None
+#     form = NameForm()
+#     if form.validate_on_submit():
+#         name = form.name.data
+#     form.name.data = ''
+#     return render_template('writing.html', form=form, name=name)
 
 @app.errorhandler(404)
 def page_not_found(e):
