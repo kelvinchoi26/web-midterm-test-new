@@ -58,6 +58,14 @@ def writing():
 def board():
     return render_template('board.html')
 
+@app.route('/post')
+def post():
+    return render_template('post.html')
+
+@app.route('/author')
+def author():
+    return render_template('author.html')
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
